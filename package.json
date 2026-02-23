@@ -1,6 +1,6 @@
 {
-  "name": "wa-sqlite",
-  "version": "1.0.9",
+  "name": "@rivetkit/sqlite",
+  "version": "0.1.0",
   "type": "module",
   "main": "src/sqlite-api.js",
   "types": "src/types/index.d.ts",
