@@ -155,10 +155,10 @@ declare interface SQLitePrepareOptions {
  * // 'wa-sqlite-async.mjs' (asynchronous). You should only
  * // use the asynchronous build if you plan to use an
  * // asynchronous VFS or module.
- * import SQLiteESMFactory from 'wa-sqlite/dist/wa-sqlite.mjs';
+ * import SQLiteESMFactory from '@rivetkit/sqlite/dist/wa-sqlite.mjs';
  * 
  * // Import the Javascript API wrappers.
- * import * as SQLite from 'wa-sqlite';
+ * import * as SQLite from '@rivetkit/sqlite';
  * 
  * // Use an async function to simplify Promise handling.
  * (async function() {
@@ -852,7 +852,7 @@ declare interface SQLiteAPI {
 }
 
 /** @ignore */
-declare module 'wa-sqlite/src/sqlite-constants.js' {
+declare module '@rivetkit/sqlite/src/sqlite-constants.js' {
   export const SQLITE_OK: 0;
   export const SQLITE_ERROR: 1;
   export const SQLITE_INTERNAL: 2;
@@ -1087,8 +1087,8 @@ declare module 'wa-sqlite/src/sqlite-constants.js' {
   export const SQLITE_PREPARE_NO_VTAB: 0x04;
 }
 
-declare module 'wa-sqlite' {
-  export * from 'wa-sqlite/src/sqlite-constants.js';
+declare module '@rivetkit/sqlite' {
+  export * from '@rivetkit/sqlite/src/sqlite-constants.js';
 
   /**
    * @ignore
@@ -1107,20 +1107,20 @@ declare module 'wa-sqlite' {
 }
 
 /** @ignore */
-declare module 'wa-sqlite/dist/wa-sqlite.mjs' {
+declare module '@rivetkit/sqlite/dist/wa-sqlite.mjs' {
   function ModuleFactory(config?: object): Promise<any>;
   export = ModuleFactory;
 }
 
 /** @ignore */
-declare module 'wa-sqlite/dist/wa-sqlite-async.mjs' {
+declare module '@rivetkit/sqlite/dist/wa-sqlite-async.mjs' {
   function ModuleFactory(config?: object): Promise<any>;
   export = ModuleFactory;
 }
 
 /** @ignore */
-declare module 'wa-sqlite/src/VFS.js' {
-  export * from 'wa-sqlite/src/sqlite-constants.js';
+declare module '@rivetkit/sqlite/src/VFS.js' {
+  export * from '@rivetkit/sqlite/src/sqlite-constants.js';
 
   export class Base {
     mxPathName: number;
@@ -1235,8 +1235,8 @@ declare module 'wa-sqlite/src/VFS.js' {
 }
 
 /** @ignore */
-declare module 'wa-sqlite/src/examples/IndexedDbVFS.js' {
-  import * as VFS from "wa-sqlite/src/VFS.js";
+declare module '@rivetkit/sqlite/src/examples/IndexedDbVFS.js' {
+  import * as VFS from "@rivetkit/sqlite/src/VFS.js";
   export class IndexedDbVFS extends VFS.Base {
     /**
      * @param {string} idbName Name of IndexedDB database.
@@ -1288,8 +1288,8 @@ declare module 'wa-sqlite/src/examples/IndexedDbVFS.js' {
 }
 
 /** @ignore */
-declare module 'wa-sqlite/src/examples/MemoryVFS.js' {
-  import * as VFS from "wa-sqlite/src/VFS.js";
+declare module '@rivetkit/sqlite/src/examples/MemoryVFS.js' {
+  import * as VFS from "@rivetkit/sqlite/src/VFS.js";
   /** @ignore */
   export class MemoryVFS extends VFS.Base {
     name: string;
@@ -1299,14 +1299,14 @@ declare module 'wa-sqlite/src/examples/MemoryVFS.js' {
 }
 
 /** @ignore */
-declare module 'wa-sqlite/src/examples/MemoryAsyncVFS.js' {
-  import { MemoryVFS } from "wa-sqlite/src/examples/MemoryVFS.js";
+declare module '@rivetkit/sqlite/src/examples/MemoryAsyncVFS.js' {
+  import { MemoryVFS } from "@rivetkit/sqlite/src/examples/MemoryVFS.js";
   export class MemoryAsyncVFS extends MemoryVFS {
   }
 }
 
 /** @ignore */
-declare module 'wa-sqlite/src/examples/tag.js' {
+declare module '@rivetkit/sqlite/src/examples/tag.js' {
   /**
    * @ignore
    * Template tag builder. This function creates a tag with an API and
